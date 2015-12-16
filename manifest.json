@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "TUNet",
+  "description": "This extension help to connect Internet from inner THU.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "image/icon.png",
+    "default_popup": "html/login.html",
+    "succeed_popup": "html/succeed.html"
+  },
+
+  "options_page":"html/options.html",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}
