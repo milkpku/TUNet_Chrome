@@ -6,32 +6,23 @@
  -->
 <html>
   <head>
-    <title>Getting Started Extension's Popup</title>
-    <style>
-      body {
-        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        font-size: 100%;
-      }
-      #status {
-        /* avoid an excessively wide status text */
-        white-space: pre;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 400px;
-      }
-    </style>
+    <title>TUNet</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    
+    <script src="../script/jquery.js"></script>
+    <script src="../script/util.js"></script>
+    <script src="../script/md5.js"></script>
+    <script src="../script/login.js"></script>
 
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
-    <script src="popup.js"></script>
   </head>
+
   <body>
     <div id="status"></div>
-    <img id="image-result" hidden>
+    <div class="feild">
+      <input type="submit" class="btn btn-lg btn-primary btn-block" value="登陆" onclick="do_login()">
+      <input type="submit" class="btn btn-lg btn-primary btn-block" value="离线" onclick="do_logout()">
+      <input type="submit" class="btn btn-lg btn-primary btn-block" value="设置" onclick="do_set()">
+    </div>
   </body>
 </html>
 
